@@ -1,0 +1,21 @@
+delimiter $$
+
+CREATE TABLE `cotacao_bovespa` (
+  `codigo_acao` varchar(12) NOT NULL,
+  `nome_empresa` varchar(12) DEFAULT NULL,
+  `tipo_acao` varchar(10) DEFAULT NULL,
+  `data` date NOT NULL,
+  `preco_abertura` decimal(9,2) DEFAULT NULL,
+  `preco_fechamento` decimal(9,2) DEFAULT NULL,
+  `preco_minimo` decimal(9,2) DEFAULT NULL,
+  `preco_maximo` decimal(9,2) DEFAULT NULL,
+  `preco_medio` decimal(9,2) DEFAULT NULL,
+  `preco_melhor_oferta_compra` decimal(9,2) DEFAULT NULL,
+  `preco_melhor_oferta_venda` decimal(9,2) DEFAULT NULL,
+  `numero_negocios` bigint(20) DEFAULT NULL,
+  `quantidade_titulos_negociados` bigint(20) DEFAULT NULL,
+  `volume_negociado` bigint(20) DEFAULT NULL,
+  PRIMARY KEY (`codigo_acao`,`data`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8$$
+
+delete FROM bovespa.cotacao_bovespa;
