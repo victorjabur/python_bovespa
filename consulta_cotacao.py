@@ -3,7 +3,7 @@
 import urllib2
 from xml.dom import minidom
 
-acao = ['PETR4']
+acao = ['NATU3', 'PETR4']
 
 for y in acao:
     url = 'http://www.bmfbovespa.com.br/Pregao-Online/ExecutaAcaoAjax.asp?intEstado=1&CodigoPapel=%s' % y
